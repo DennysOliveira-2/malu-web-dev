@@ -1,0 +1,43 @@
+.press-container {
+    position: absolute;
+    left:50%;
+    -webkit-transform: translateX(-50%);
+}
+
+.press-page {
+    height: 297mm;
+    width: 210mm;
+   
+    background-color: rgb(239, 246, 255);
+    outline: 1px dashed rgb(170, 167, 167);
+    outline-offset: -5mm;
+    
+}
+
+.press-content {
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+
+    padding: 5mm;
+}
+
+.press-row {
+    
+    display: flex;
+
+}
+
+.label {
+    text-align: left;
+    width: 95mm;
+    height: 45mm;
+    
+    margin: 2.5mm;
+
+    background-color: rgb(192, 193, 197);
+}
