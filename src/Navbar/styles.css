@@ -1,5 +1,5 @@
 .navbar {
-    background-color: #000000;
+    background-color: #6e9fa6;
     padding: 15px;
 
     display: flex;
@@ -11,7 +11,7 @@
     font-size: 24px;
     line-height: 33px;
     letter-spacing: -0.025em;
-    color: #FFFFFF;
+    color: #ecfbff;
 
     margin-left: 25px;
 }

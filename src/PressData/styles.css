@@ -1,0 +1,19 @@
+.data-page {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    width: auto;
+}
+
+.data-container {
+    width: auto;
+    
+    background-color: gray;
+
+    text-align: center;
+    border-radius: 5px;
+}
+
