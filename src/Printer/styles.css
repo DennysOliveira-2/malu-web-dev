@@ -1,0 +1,78 @@
+/*                        */
+/* Printer Styling */
+/*                        */
+
+
+.printer-page {
+    
+}
+
+.printer-container {
+    height: 297mm;
+    width: 210mm;
+   
+    background-color: rgb(134, 134, 134);
+    outline: 1px dashed rgb(217, 217, 217);
+    outline-offset: -5mm;
+    
+}
+
+.printer-content {
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+
+    padding: 5mm;
+}
+
+.printer-row {
+    
+    display: flex;
+
+}
+
+.label {
+    text-align: left;
+    width: 95mm;
+    height: 45mm;
+    
+    margin: 2.5mm;
+
+    background-color: rgb(192, 193, 197);
+}
+
+/*------------------------*/
+/* PrintableLabel Styling */
+/*----------------------- */
+
+.printable-label-container {
+    background-color: white;
+    width: 95mm; /* 95 x 2 = 190mm - 20mm left for border management */
+    height: 45mm;
+    margin: 2mm;
+    display: inline-flex;
+}
+
+.printable-label-content {
+
+}
+
+.printable-label {
+    font-size: 8px;    
+}
+
+.pl-left {
+
+}
+
+.pl-mid {
+
+}
+
+.pl-right {
+
+}

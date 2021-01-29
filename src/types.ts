@@ -4,6 +4,7 @@ export type Label = {
 }
 
 export interface CardState {
+    id: number,
     name: string,
     birth: string,
     composition: string,

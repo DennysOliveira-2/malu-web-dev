@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react"
-import { CardState } from "../types"
 import './card.css'
 
 type Props = {
@@ -15,22 +14,21 @@ export default function CardForm({ id, parseData }: Props) {
         posology: "Uma vez por dia.",
         therapist: "Maria Luiza de Almeida",
         desc: "Lorem ipsum dolor..."
-    })
+    });
          
     function handleChange(e: any) {
         
         setInput({
             ...input,
             [e.currentTarget.name]: e.currentTarget.value
-        })
-        
-        parseData(id, input);        
+        }, )
+
+         
     }
 
     useEffect(() => {
-        
-    }, [ input, setInput])
-
+        parseData(id, input); 
+    },[id, input])
 
     const handleSubmit = (e: any) => {
         e.preventDefault();

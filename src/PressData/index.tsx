@@ -1,11 +1,11 @@
-import { useLocation } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
+import { Label, CardState } from '../types'
+import { useEffect, useState } from "react";
 import Navbar from "../Navbar";
 import CardForm from "./CardForm";
 import './styles.css';
-import { Label, CardState } from '../types'
-import { useState } from "react";
 
-type Location = {
+interface Location {
     state: {
         selected: []
     }
@@ -17,47 +17,25 @@ export default function PressData() {
     const selectedObjs = from.selected;
     const [state, setState ] = useState({});
 
-    // Array in JSON format
-    //console.log('object array')
-    //console.log(selectedObjs)
+    useEffect(() => {
+        console.log(state)
+    },[ state ])
 
     const parseData = (id: number, input: CardState) => {
-        // setState({
-        //     [id]: {
-        //         input
-        //     }
-        // })
-        
-        let prevState = state;
-
-        let newState = {
-            name: input.name,
-            birth: input.birth,
-            composition: input.composition,
-            date: input.date,
-            posology: input.posology,
-            therapit: input.therapist,
-            desc: input.desc
-        }
-
+        let prevState = state;        
         setState({
-            ...state,
+            ...prevState,
             [id]: input
         })
 
-        console.log(state)
-        // setState(prevState => ({
-        //     ...prevState,
-        //     id : input
-        // }));
-
         return
     }
+    
 
     function drawCards() {
         let arr: Array<Label> = selectedObjs.slice();
         let component: JSX.Element[] = [];
-
+        
         for (let i = 0; i < 10; i++) {
             if (arr[i].selected) {
                 component.push(
@@ -66,10 +44,6 @@ export default function PressData() {
             }
         }
         
-        function handleOnClick() {
-            
-        }
-
         return (
             <div>
                 <div className="card-header">
@@ -77,7 +51,14 @@ export default function PressData() {
                 </div>
                 <div className="card-body">
                     {component}
-                    <button onClick={handleOnClick}> FINALIZR </button>
+                    <Link to={{
+                        pathname: '/print',
+                        state: state
+                    }}>
+                        <button className="print-button no-select">
+                            Finalizar
+                        </button>
+                    </Link>
                 </div>
 
             </div>

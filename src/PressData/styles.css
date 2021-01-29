@@ -17,3 +17,30 @@
     border-radius: 5px;
 }
 
+.print-button {
+    margin-top: 15px;
+  
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: -0.05em;
+
+    color: black;
+    background-color: var(--primary-color);
+
+    width: 150px;
+    height: 35px;
+    
+    border-radius: 10px;
+    line-height: 25px;
+
+    text-align: center;
+    color: white;
+    border: 0;
+    cursor: pointer;
+}
+
+.print-button:hover {
+    background-color: var(--primary-hover-color);
+}
+

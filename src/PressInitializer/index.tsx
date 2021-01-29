@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { Label } from '../types'
 import { Link } from "react-router-dom";
+import { Label } from '../types'
 import Navbar from "../Navbar";
 import InitializerLabel from "./InitializerLabel";
 import './styles.css';
@@ -39,7 +39,7 @@ export default function PressInitializer() {
 
     function handleSend(arr: Array<Label>) {
         let finalArr = createLabelArr(10).sort((a, b) => a.id - b.id);
-
+        
         let sArr = arr.sort((a, b) => a.id - b.id);
 
         for(let i = 0; i < finalArr.length; i ++) {
@@ -55,12 +55,7 @@ export default function PressInitializer() {
             }
         }
                 
-        console.log('Selected Array:')
-        console.log(arr)
-        
-        console.log("Final Array")
-        console.log(finalArr)
-        
+        console.log(selected)        
         return finalArr;
     }
 
